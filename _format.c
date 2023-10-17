@@ -8,7 +8,7 @@
  *
  * Return:1
  */
-int check_char(char betty)
+int check_char(char betty[])
 {
 	char betty[] = {'c','s','d','i','b','%'}
 	int count;

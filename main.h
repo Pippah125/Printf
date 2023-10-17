@@ -1,5 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
+#include<stdarg.h>
 typedef struct specified
 {
 	char *specifier;
@@ -15,3 +16,4 @@ int print_int (va_list betty);
 void reuseint(int B);
 int print_string(va_list betty);
 int print_char(va_list betty);
+#endif
