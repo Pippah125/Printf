@@ -2,7 +2,6 @@
 void integer(int num)
 {
 	int a;
-	int count;
 	if(num == 0)
 	{
 		return;
