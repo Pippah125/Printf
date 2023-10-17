@@ -29,10 +29,10 @@ int print_string(va_list betty)
 		while(string[count])
 		{
 			_putchar(string[count]);
-			count++
+			count++;
 		}
-		return (count);
 	}
+	return(count);
 }
 
 /**

@@ -6,7 +6,7 @@ typedef struct specified
 	char *specifier;
 	int(*B)(va_list betty);
 }specified;
-nt invalid_specifier(char former, char present, int count);
+int invalid_specifier(char former, char present, int count);
 int check_char(char betty);
 int valid_specifier(char format, va_list betty);
 int _format(const char *form, va_list betty);

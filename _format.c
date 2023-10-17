@@ -8,18 +8,18 @@
  *
  * Return:1
  */
-int check_char(char betty[])
+int check_char(char betty)
 {
-	char betty[] = {'c','s','d','i','b','%'}
+	char type[] = {'c','s','d','i','b','%'};
 	int count;
-	for(count = 0; betty[count] != '\0'; count++)
+	for(count = 0; type[count] != '\0'; count++)
 	{
-		if (betty[count] == betty)
+		if (type[count] == betty)
 		{
 			return(1);
 		}
-		return(0);
 	}
+	return (0);
 }
 /**
  * invalid_specifier - print out invalid specifier
@@ -52,19 +52,19 @@ int invalid_specifier(char former, char present, int count)
  */
 int valid_specifier(char format, va_list betty)
 {
-	int A = 0, count = 0;
-	specified betty = {
-		{"s", print_string}
-		{"b", print_binary}
-		{"c", print_char}
-		{"d", print_int}
-		{"i", print_int}
+	int A = 0;  
+	int count = 0;
+	specified type[] = {
+		{"s", print_string},
+		{"c", print_char},
+		{"d", print_int},
+		{"i", print_int},
 		{NULL, NULL}
 	};
-	while(betty[A] .specifier)
+	while(type[A] .specifier)
 	{
-		if(*betty[A].specifier == format)
-			count = betty[A] .B(betty);
+		if(*type[A].specifier == format)
+			count = type[A].B(betty);
 		A++;
 	}
 	return(count);
@@ -80,7 +80,7 @@ int valid_specifier(char format, va_list betty)
 int _format(const char *form, va_list betty)
 {
 	int count = 0, A = 0;
-	for(int A = 0; form[A]; A++)
+	while(form && form[A])
 	{
 		if(form[A] == '%')
 		{ 
@@ -105,13 +105,16 @@ int _format(const char *form, va_list betty)
 					count = count + valid_specifier(form[A], betty);
 				}
 			}
-			else
-			{
-				count = count + _putchar(form[A]);
-			}
-			A++;
 		}
-		return (count);
-	}
+		
+				else
+				{
+				count = count + _putchar(form[A]);
+				}
+				A++;
+	}	
+			
+		return(count);
 }
+
 	
