@@ -5,4 +5,5 @@ int _putchar(char c);
 int _puts(char * t);
 int _putsnewline(char *t);
 int callback(int num);
+void integer(int num);
 #endif

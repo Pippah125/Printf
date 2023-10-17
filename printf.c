@@ -36,13 +36,12 @@ int _printf(const char *format, ...)
 		}
 	else if(format[x + 1] == '%')																		{
 		_putchar('%');
-		x++;									      }
-																						else if (format[x +1] == 'd')
-	{
-		int num = (va_arg(print, int));
-		y += (callback(num));
-		x++;																					_putchar('\n');
-	}
+		x++;									      }	
+		else if ((format[x +1] == 'd') || (format[x + 1] =='i'))
+		{
+		integer(va_arg(print, int));
+		x++;
+		}
 	else
 	{
 		_putchar(format[x]);
