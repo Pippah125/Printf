@@ -5,6 +5,8 @@ int _printf(const char *format, ...)
 	int x;
 	int y = 0;
 	int v;
+	int num;
+	int count;
 	va_list print;
 	va_start(print, format);
 	if(format == NULL)
@@ -38,14 +40,10 @@ int _printf(const char *format, ...)
 			_putchar('%');
 			x++;
 		}
-		else
-		{
-			_putchar('n');
-		}
-
 		else if ((format[x +1] == 'd') || (format[x + 1] =='i'))
 		{
-		integer(va_arg(print, int));
+			num = (va_arg(print, int));
+			count = callback(num);
 		x++;
 		}
 	else
