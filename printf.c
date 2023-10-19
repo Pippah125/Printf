@@ -47,13 +47,17 @@ int _printf(const char *format, ...)
 			 callback(num);
 		x++;
 		}
+		else if(format[x + 1] == '\0')
+		{
+			return(-1);
+		}
 	else
 	{
-		_putchar(' ');
+		_putchar(format[x]);
 																					}
 
 	y++;
-																						}
+	}
 	va_end(print);
 	return (y);
 }
