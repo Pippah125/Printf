@@ -49,8 +49,8 @@ int _printf(const char *format, ...)
 		}
 	else
 	{
-		_putchar(format[x]);
-																						}
+		_putchar(' ');
+																					}
 
 	y++;
 																						}
