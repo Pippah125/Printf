@@ -8,6 +8,7 @@ int _printf(const char *format, ...)
 	int y = 0;
 	int v;
 	int num;
+	int count;
 	va_list print;
 	va_start(print, format);
 	if(format == NULL)
@@ -44,7 +45,8 @@ int _printf(const char *format, ...)
 		else if ((format[x +1] == 'd') || (format[x + 1] =='i'))
 		{
 			num = (va_arg(print, int));
-			 callback(num);
+			count =  callback(num);
+			y = y + count;
 		x++;
 		}
 		else if(format[x + 1] == '\0')
