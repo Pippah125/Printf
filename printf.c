@@ -1,4 +1,6 @@
 #include"main.h"
+#include<stddef.h>
+#include<stdarg.h>
 
 int _printf(const char *format, ...)
 {
@@ -6,7 +8,6 @@ int _printf(const char *format, ...)
 	int y = 0;
 	int v;
 	int num;
-	int count;
 	va_list print;
 	va_start(print, format);
 	if(format == NULL)
@@ -43,7 +44,7 @@ int _printf(const char *format, ...)
 		else if ((format[x +1] == 'd') || (format[x + 1] =='i'))
 		{
 			num = (va_arg(print, int));
-			count = callback(num);
+			 callback(num);
 		x++;
 		}
 	else

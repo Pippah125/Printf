@@ -1,11 +1,11 @@
 #include"main.h"
 int callback(int num)
 {
-	int count = 0;
 	if(num == 0)
 	{
 		return (0);
 	}
+	int count = 0;
 	if (num < 0)
 	{
 		_putchar('-');
