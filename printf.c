@@ -48,6 +48,11 @@ int _printf(const char *format, ...)
 			y = y + num;
 			x++;
 		}
+		else if (format[x + 1] == 'd')
+		{
+    			y += printf_dec(print);
+    				x++;
+		}
 		else if(format[x + 1] == '\0')
 		{
 			return(-1);

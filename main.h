@@ -10,4 +10,5 @@ int print_int(va_list betty);
 int _putsnewline(char *t);
 int callback(int num);
 void integer(int num);
+int printf_dec(va_list args);
 #endif
