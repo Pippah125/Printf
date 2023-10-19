@@ -33,9 +33,16 @@ int _printf(const char *format, ...)
 		x++;
 		y += (v - 1);
 		}
-	else if(format[x + 1] == '%')																		{
+	else if(format[x + 1] == '%')							{
+		if(format[x+2] == '%')
+		{
 		_putchar('%');
 		x++;
+		}
+		else
+		{
+			_putchar('n');
+		}
 	 }	
 		else if ((format[x +1] == 'd') || (format[x + 1] =='i'))
 		{
