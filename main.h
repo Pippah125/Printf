@@ -6,8 +6,8 @@
 int _printf(const char *format, ...);
 int _putchar(char c);
 int _puts(char * t);
+int print_int(va_list betty);
 int _putsnewline(char *t);
 int callback(int num);
 void integer(int num);
-int print_int(int n);
 #endif

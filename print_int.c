@@ -1,12 +1,15 @@
 #include"main.h"
 #include<stdio.h>
-int print_int(int n)
+#include<stdarg.h>
+int print_int(va_list betty)
 {
 	int num; 
+	int n;
 	int last;
 	int digit;
 	int exp;
 	int i;
+	n = va_arg(betty,int);
 	last = n % 10;
 	exp = 1;
 	i = 1;

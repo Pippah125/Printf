@@ -8,7 +8,6 @@ int _printf(const char *format, ...)
 	int y = 0;
 	int v;
 	int num;
-	int printed;
 	
 	va_list print;
 	va_start(print, format);
@@ -45,9 +44,8 @@ int _printf(const char *format, ...)
 		}
 		else if (format[x + 1] =='i')
 		{
-			num = va_arg(print,int);
-			printed = print_int(num);
-			y = y + printed;
+			num = print_int(print);
+			y = y + num;
 			x++;
 		}
 		else if(format[x + 1] == '\0')
